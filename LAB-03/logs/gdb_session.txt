@@ -1,0 +1,107 @@
+logging debugredirect:  off: Debug output will go to both the screen and the log file.
+logging enabled:  on: Logging is enabled.
+logging file:  The current logfile is "/home/chun/embedded_lab3/logs/gdb_session.txt".
+logging overwrite:  on: Logging overwrites the log file.
+logging redirect:  off: Output will go to both the screen and the log file.
+logging debugredirect:  off: Debug output will go to both the screen and the log file.
+logging enabled:  on: Logging is enabled.
+logging file:  The current logfile is "/home/chun/embedded_lab3/logs/gdb_session.txt".
+logging overwrite:  on: Logging overwrites the log file.
+logging redirect:  off: Output will go to both the screen and the log file.
+Remote debugging using 127.0.0.1:1234
+Reading symbols from /home/chun/embedded_lab3/rootfs/initramfs/lib/ld-linux-armhf.so.3...
+0x76fdee58 in _start () from /home/chun/embedded_lab3/rootfs/initramfs/lib/ld-linux-armhf.so.3
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x00400732 in main at buggy_app.c:40
+	breakpoint already hit 2 times
+2       breakpoint     keep y   0x00400682 in process_data at buggy_app.c:8
+	breakpoint already hit 2 times
+3       breakpoint     keep y   0x0040068c in process_data at buggy_app.c:11
+	stop only if i == 5 (host evals)
+	breakpoint already hit 1 time
+4       breakpoint     keep y   0x004006cc in create_message at buggy_app.c:20
+	breakpoint already hit 1 time
+5       breakpoint     keep y   0x00400702 in calculate at buggy_app.c:32
+	breakpoint already hit 2 times
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x00400732 in main at buggy_app.c:40
+	breakpoint already hit 2 times
+2       breakpoint     keep y   0x00400682 in process_data at buggy_app.c:8
+	breakpoint already hit 2 times
+3       breakpoint     keep y   0x0040068c in process_data at buggy_app.c:11
+	stop only if i == 5 (host evals)
+	breakpoint already hit 1 time
+4       breakpoint     keep y   0x004006cc in create_message at buggy_app.c:20
+	breakpoint already hit 1 time
+5       breakpoint     keep y   0x00400702 in calculate at buggy_app.c:32
+	breakpoint already hit 2 times
+Continuing.
+
+Breakpoint 1, main (argc=1, argv=0x7efffe94) at buggy_app.c:40
+40	{
+Continuing.
+
+Breakpoint 2, process_data (data=0x7efffcf0, len=5) at buggy_app.c:8
+8	    int sum = 0;
+Continuing.
+
+Breakpoint 3, process_data (data=0x7efffcf0, len=5) at buggy_app.c:11
+11	        sum += data[i];
+$14 = 5
+❌️ Undefined command: "".  Try "help".
+$15 = 5
+$16 = {10, 20, 30, 40, 50}
+$17 = 150
+#0  process_data (data=0x7efffcf0, len=5) at buggy_app.c:11
+#1  0x00400774 in main (argc=1, argv=0x7efffe94) at buggy_app.c:48
+#0  process_data (data=0x7efffcf0, len=5) at buggy_app.c:11
+#1  0x00400774 in main (argc=1, argv=0x7efffe94) at buggy_app.c:48
+Continuing.
+
+Breakpoint 4, create_message (text=0x400940 "Hello Embedded Linux") at buggy_app.c:20
+20	    char *buf = malloc(strlen(text) + 1);
+22	    strcpy(buf, text);
+24	    free(buf);
+$18 = 0x422010 "Hello Embedded Linux"
+0x422010:	"Hello Embedded Linux"
+26	    return buf;
+$19 = 0x422010 "\"\004"
+#0  create_message (text=0x400940 "Hello Embedded Linux") at buggy_app.c:26
+#1  0x00400788 in main (argc=1, argv=0x7efffe94) at buggy_app.c:53
+#0  create_message (text=0x400940 "Hello Embedded Linux") at buggy_app.c:26
+#1  0x00400788 in main (argc=1, argv=0x7efffe94) at buggy_app.c:53
+Continuing.
+
+Breakpoint 5, calculate (a=100000, b=100000) at buggy_app.c:32
+32	    int result = a * b;
+Continuing.
+[Inferior 1 (process 80) exited normally]
+❌️ The program is not being run.
+❌️ No symbol "a" in current context.
+❌️ No symbol "a" in current context.
+Remote debugging using 127.0.0.1:1234
+Reading symbols from /home/chun/embedded_lab3/rootfs/initramfs/lib/ld-linux-armhf.so.3...
+0x76fdee58 in _start () from /home/chun/embedded_lab3/rootfs/initramfs/lib/ld-linux-armhf.so.3
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep n   0x00400732 in main at buggy_app.c:40
+	breakpoint already hit 3 times
+2       breakpoint     keep n   0x00400682 in process_data at buggy_app.c:8
+	breakpoint already hit 3 times
+3       breakpoint     keep n   0x0040068c in process_data at buggy_app.c:11
+	stop only if i == 5 (host evals)
+	breakpoint already hit 2 times
+4       breakpoint     keep n   0x004006cc in create_message at buggy_app.c:20
+	breakpoint already hit 2 times
+5       breakpoint     keep y   0x00400702 in calculate at buggy_app.c:32
+	breakpoint already hit 3 times
+Continuing.
+
+Breakpoint 5, calculate (a=100000, b=100000) at buggy_app.c:32
+32	    int result = a * b;
+$20 = 100000
+$21 = 100000
+$22 = 10000000000
+34	    printf("calculate(%d, %d) = %d\n", a, b, result);
+$23 = 1410065408
+#0  calculate (a=100000, b=100000) at buggy_app.c:34
+#1  0x004007b4 in main (argc=1, argv=0x7efffe94) at buggy_app.c:60
