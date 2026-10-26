@@ -1,0 +1,38 @@
+# Compiled applications
+*.o
+*.so
+*.ko
+*.mod
+*.mod.c
+*.cmd
+*.symvers
+modules.order
+
+# Temporary files
+*~
+*.swp
+*.swo
+*.tmp
+*.bak
+*_backup.c
+
+# Executables and binary outputs
+*.elf
+*.bin
+*.cpio.gz
+*.data
+*.vgcore.*
+
+# Kernel and bootloader binaries
+**/output/zImage
+**/output/u-boot
+**/output/*.dtb
+
+# Generated rootfs binaries
+**/rootfs/bin/busybox
+**/rootfs/lib/
+**/rootfs/usr/bin/gdbserver
+
+# Debugging output
+perf.data
+perf.data.old
