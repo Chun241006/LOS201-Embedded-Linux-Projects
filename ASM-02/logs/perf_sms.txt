@@ -1,0 +1,16 @@
+# started on Sat Oct 24 02:16:42 2026
+
+
+ Performance counter stats for './app/sms_app_debug -i 500 -d 35':
+
+            504,52 msec task-clock                                                            
+             7.808      context-switches                                                      
+               243      cpu-migrations                                                        
+                89      page-faults                                                           
+
+      35,010973448 seconds time elapsed
+
+       0,173059000 seconds user
+       0,682443000 seconds sys
+
+

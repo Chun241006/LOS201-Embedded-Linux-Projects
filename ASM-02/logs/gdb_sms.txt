@@ -1,0 +1,27 @@
+Breakpoint 1 at 0x4500: file src/sensor_thread.c, line 225.
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff7bff6c0 (LWP 7661)]
+[New Thread 0x7ffff73fe6c0 (LWP 7662)]
+[New Thread 0x7ffff6bfd6c0 (LWP 7663)]
+[New Thread 0x7ffff63fc6c0 (LWP 7664)]
+[MAIN] SCHED_FIFO unavailable: Operation not permitted
+[Switching to Thread 0x7ffff63fc6c0 (LWP 7664)]
+
+Thread 5 "sms_app_debug" hit Breakpoint 1, sensor_thread (arg=0x7fffffffd450) at src/sensor_thread.c:225
+225	{
+  Id   Target Id                                        Frame 
+  1    Thread 0x7ffff7f9a740 (LWP 7658) "sms_app_debug" __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+  2    Thread 0x7ffff7bff6c0 (LWP 7661) "sms_app_debug" __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+  3    Thread 0x7ffff73fe6c0 (LWP 7662) "sms_app_debug" __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+  4    Thread 0x7ffff6bfd6c0 (LWP 7663) "sms_app_debug" __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+* 5    Thread 0x7ffff63fc6c0 (LWP 7664) "sms_app_debug" sensor_thread (arg=0x7fffffffd450) at src/sensor_thread.c:225
+#0  sensor_thread (arg=0x7fffffffd450) at src/sensor_thread.c:225
+#1  0x00007ffff7ca3dfa in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:454
+#2  0x00007ffff7d375cc in __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78

@@ -1,0 +1,602 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 899  of event 'cpu-clock'
+# Event count (approx.): 224750000
+#
+# Overhead  Command        Shared Object         Symbol                          
+# ........  .............  ....................  ................................
+#
+    12.90%  sms_app_debug  libc.so.6             [.] __syscall_cancel_arch_end
+            |
+            ---__syscall_cancel_arch (inlined)
+               |          
+               |--11.12%--__clock_nanosleep (inlined)
+               |          __nanosleep
+               |          |          
+               |          |--5.23%--alert_thread
+               |          |          start_thread
+               |          |          __clone3 (inlined)
+               |          |          
+               |          |--4.45%--logger_thread
+               |          |          start_thread
+               |          |          __clone3 (inlined)
+               |          |          
+               |          |--0.78%--sensor_read_one
+               |          |          sensor_thread
+               |          |          start_thread
+               |          |          __clone3 (inlined)
+               |          |          
+               |           --0.67%--main
+               |                     __libc_start_call_main
+               |                     call_init (inlined)
+               |                     __libc_start_main_impl (inlined)
+               |                     _start
+               |          
+                --1.78%--___mq_timedreceive_time64 (inlined)
+                          |          
+                          |--1.11%--alert_thread
+                          |          start_thread
+                          |          __clone3 (inlined)
+                          |          
+                           --0.67%--logger_thread
+                                     start_thread
+                                     __clone3 (inlined)
+
+     9.12%  sms_app_debug  [unknown]             [k] 0xffffffff8f29e1eb
+            |
+            ---0xffffffff8f29e1eb
+               0xffffffff905309d3
+               0xffffffff90530d97
+               |          
+                --8.90%--0xffffffff90538aee
+                          0xffffffff8f3773eb
+                          0xffffffff8f383524
+                          0xffffffff8f385dee
+                          0xffffffff8f148f75
+                          0xffffffff90520b65
+                          0xffffffff8ee0012b
+                          __syscall_cancel_arch (inlined)
+                          __clock_nanosleep (inlined)
+                          __nanosleep
+                          |          
+                          |--4.78%--alert_thread
+                          |          start_thread
+                          |          __clone3 (inlined)
+                          |          
+                          |--3.34%--logger_thread
+                          |          start_thread
+                          |          __clone3 (inlined)
+                          |          
+                           --0.67%--sensor_read_one
+                                     sensor_thread
+                                     start_thread
+                                     __clone3 (inlined)
+
+     6.56%  sms_app_debug  libc.so.6             [.] __internal_syscall_cancel
+            |
+            ---__internal_syscall_cancel
+               |          
+               |--5.90%--__clock_nanosleep (inlined)
+               |          |          
+               |           --5.78%--__nanosleep
+               |                     |          
+               |                     |--2.67%--logger_thread
+               |                     |          start_thread
+               |                     |          __clone3 (inlined)
+               |                     |          
+               |                     |--1.78%--alert_thread
+               |                     |          start_thread
+               |                     |          __clone3 (inlined)
+               |                     |          
+               |                     |--0.67%--sensor_read_one
+               |                     |          sensor_thread
+               |                     |          start_thread
+               |                     |          __clone3 (inlined)
+               |                     |          
+               |                      --0.67%--main
+               |                                __libc_start_call_main
+               |                                call_init (inlined)
+               |                                __libc_start_main_impl (inlined)
+               |                                _start
+               |          
+                --0.56%--__nanosleep
+
+     6.45%  sms_app_debug  sms_app_debug         [.] logger_thread
+            |
+            ---logger_thread
+               start_thread
+               __clone3 (inlined)
+
+     4.67%  sms_app_debug  libc.so.6             [.] clock_gettime@@GLIBC_2.17
+            |
+            ---__clock_gettime (inlined)
+               |          
+                --4.12%--start_thread
+                          __clone3 (inlined)
+
+     3.56%  sms_app_debug  sms_app_debug         [.] alert_thread
+            |
+            ---alert_thread
+               start_thread
+               __clone3 (inlined)
+
+     3.23%  sms_app_debug  [unknown]             [k] 0xffffffff9053b391
+            |
+            ---0xffffffff9053b391
+               |          
+                --2.89%--0xffffffff8f376675
+                          0xffffffff90538ae2
+                          0xffffffff8f3773eb
+                          |          
+                           --2.78%--0xffffffff8f383524
+                                     0xffffffff8f385dee
+                                     0xffffffff8f148f75
+                                     0xffffffff90520b65
+                                     0xffffffff8ee0012b
+                                     __syscall_cancel_arch (inlined)
+                                     __clock_nanosleep (inlined)
+                                     __nanosleep
+                                     |          
+                                     |--1.33%--logger_thread
+                                     |          start_thread
+                                     |          __clone3 (inlined)
+                                     |          
+                                      --1.00%--alert_thread
+                                                start_thread
+                                                __clone3 (inlined)
+
+     3.11%  sms_app_debug  libc.so.6             [.] __nanosleep
+            |
+            ---__nanosleep
+               |          
+               |--1.11%--start_thread
+               |          __clone3 (inlined)
+               |          
+               |--1.00%--alert_thread
+               |          start_thread
+               |          __clone3 (inlined)
+               |          
+                --0.67%--logger_thread
+                          start_thread
+                          __clone3 (inlined)
+
+     2.67%  sms_app_debug  [unknown]             [k] 0xffffffff8f719b06
+            |
+            ---0xffffffff8f719b06
+               0xffffffff8f902758
+               0xffffffff8f1480de
+               0xffffffff90520b65
+               0xffffffff8ee0012b
+               __syscall_cancel_arch (inlined)
+               ___mq_timedreceive_time64 (inlined)
+               |          
+               |--1.45%--alert_thread
+               |          start_thread
+               |          __clone3 (inlined)
+               |          
+                --1.22%--logger_thread
+                          start_thread
+                          __clone3 (inlined)
+
+     1.89%  sms_app_debug  libc.so.6             [.] __syscall_cancel
+            |          
+            |--1.22%--__syscall_cancel
+            |          |          
+            |           --1.00%--___mq_timedreceive_time64 (inlined)
+            |                     |          
+            |                      --0.56%--alert_thread
+            |                                start_thread
+            |                                __clone3 (inlined)
+            |          
+             --0.67%--__internal_syscall_cancel (inlined)
+                       __syscall_cancel
+                       ___mq_timedreceive_time64 (inlined)
+
+     1.89%  sms_app_debug  [unknown]             [k] 0xffffffff90520ab0
+            |
+            ---0xffffffff90520ab0
+               0xffffffff8ee0012b
+               __syscall_cancel_arch (inlined)
+               |          
+               |--1.00%--___mq_timedreceive_time64 (inlined)
+               |          |          
+               |           --0.56%--logger_thread
+               |                     start_thread
+               |                     __clone3 (inlined)
+               |          
+                --0.78%--__clock_nanosleep (inlined)
+                          __nanosleep
+                          |          
+                           --0.56%--alert_thread
+                                     start_thread
+                                     __clone3 (inlined)
+
+     1.78%  sms_app_debug  libc.so.6             [.] clock_nanosleep@GLIBC_2.2.5
+            |
+            ---__clock_nanosleep (inlined)
+               |          
+                --1.67%--__nanosleep
+                          |          
+                           --1.11%--alert_thread
+                                     start_thread
+                                     __clone3 (inlined)
+
+     1.56%  sms_app_debug  libc.so.6             [.] __errno_location
+            |
+            ---__errno_location
+               start_thread
+               __clone3 (inlined)
+
+     1.45%  sms_app_debug  [unknown]             [k] 0xffffffff8f719b99
+            |
+            ---0xffffffff8f719b99
+               0xffffffff8f902153
+               0xffffffff8f902758
+               0xffffffff8f1480de
+               0xffffffff90520b65
+               0xffffffff8ee0012b
+               __syscall_cancel_arch (inlined)
+               ___mq_timedreceive_time64 (inlined)
+               |          
+               |--0.89%--logger_thread
+               |          start_thread
+               |          __clone3 (inlined)
+               |          
+                --0.56%--alert_thread
+                          start_thread
+                          __clone3 (inlined)
+
+     1.45%  sms_app_debug  [unknown]             [k] 0xffffffff8f9026d0
+            |
+            ---0xffffffff8f9026d0
+               0xffffffff90520b65
+               0xffffffff8ee0012b
+               __syscall_cancel_arch (inlined)
+               ___mq_timedreceive_time64 (inlined)
+               |          
+               |--0.89%--logger_thread
+               |          start_thread
+               |          __clone3 (inlined)
+               |          
+                --0.56%--alert_thread
+                          start_thread
+                          __clone3 (inlined)
+
+     1.45%  sms_app_debug  [unknown]             [k] 0xffffffff8fae73d4
+            |
+            ---0xffffffff8fae73d4
+               0xffffffff8f36ef4b
+               |          
+               |--0.78%--0xffffffff8f385d90
+               |          0xffffffff8f148f75
+               |          0xffffffff90520b65
+               |          0xffffffff8ee0012b
+               |          __syscall_cancel_arch (inlined)
+               |          __clock_nanosleep (inlined)
+               |          |          
+               |           --0.67%--__nanosleep
+               |          
+                --0.67%--0xffffffff8f902726
+                          0xffffffff8f1480de
+                          0xffffffff90520b65
+                          0xffffffff8ee0012b
+                          __syscall_cancel_arch (inlined)
+                          ___mq_timedreceive_time64 (inlined)
+
+     1.33%  sms_app_debug  [vdso]                [.] __vdso_time
+            |
+            ---__vdso_time
+               start_thread
+               __clone3 (inlined)
+
+     1.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f719af0
+            |
+            ---0xffffffff8f719af0
+               |          
+                --1.00%--0xffffffff8f902758
+                          0xffffffff8f1480de
+                          0xffffffff90520b65
+                          0xffffffff8ee0012b
+                          __syscall_cancel_arch (inlined)
+                          ___mq_timedreceive_time64 (inlined)
+                          |          
+                           --0.78%--logger_thread
+                                     start_thread
+                                     __clone3 (inlined)
+
+     1.00%  sms_app_debug  sms_app_debug         [.] main
+            |
+            ---main
+               __libc_start_call_main
+               call_init (inlined)
+               __libc_start_main_impl (inlined)
+               _start
+
+     0.89%  sms_app_debug  [vdso]                [.] __vdso_clock_gettime
+            |
+            ---__vdso_clock_gettime
+               |          
+                --0.78%--alert_thread
+                          start_thread
+                          __clone3 (inlined)
+
+     0.89%  sms_app_debug  [unknown]             [k] 0xffffffff8f385d64
+            |
+            ---0xffffffff8f385d64
+               0xffffffff8f148f75
+               0xffffffff90520b65
+               0xffffffff8ee0012b
+               __syscall_cancel_arch (inlined)
+               __clock_nanosleep (inlined)
+               __nanosleep
+
+     0.78%  sms_app_debug  libc.so.6             [.] mq_timedreceive@@GLIBC_2.34
+            |
+            ---___mq_timedreceive_time64 (inlined)
+               |          
+                --0.67%--start_thread
+                          __clone3 (inlined)
+
+     0.78%  sms_app_debug  [unknown]             [k] 0xffffffff8f14808f
+            |
+            ---0xffffffff8f14808f
+               0xffffffff90520b65
+               0xffffffff8ee0012b
+               __syscall_cancel_arch (inlined)
+               __clock_nanosleep (inlined)
+               __nanosleep
+
+     0.78%  sms_app_debug  [unknown]             [k] 0xffffffff8f3757be
+            |
+            ---0xffffffff8f3757be
+               0xffffffff8f37590a
+               0xffffffff8f3773a2
+               0xffffffff8f383524
+               0xffffffff8f385dee
+               0xffffffff8f148f75
+               0xffffffff90520b65
+               0xffffffff8ee0012b
+               __syscall_cancel_arch (inlined)
+               __clock_nanosleep (inlined)
+               __nanosleep
+               |          
+                --0.56%--logger_thread
+                          start_thread
+                          __clone3 (inlined)
+
+     0.78%  sms_app_debug  [unknown]             [k] 0xffffffff8f385dee
+            |
+            ---0xffffffff8f385dee
+               0xffffffff8f148f75
+               0xffffffff90520b65
+               0xffffffff8ee0012b
+               __syscall_cancel_arch (inlined)
+               __clock_nanosleep (inlined)
+               __nanosleep
+               |          
+                --0.56%--logger_thread
+                          start_thread
+                          __clone3 (inlined)
+
+     0.67%  sms_app_debug  [vdso]                [.] 0x00000000000009b0
+            |
+            ---0x749f2c19a9b0
+               |          
+                --0.56%--logger_thread
+                          start_thread
+                          __clone3 (inlined)
+
+     0.67%  sms_app_debug  sms_app_debug         [.] clock_gettime@plt
+            |
+            ---clock_gettime@plt
+               |          
+                --0.56%--start_thread
+                          __clone3 (inlined)
+
+     0.67%  sms_app_debug  sms_app_debug         [.] sensor_read_one
+            |
+            ---sensor_read_one
+               |          
+                --0.56%--sensor_thread
+                          start_thread
+                          __clone3 (inlined)
+
+     0.67%  sms_app_debug  [unknown]             [k] 0xffffffff8f719b04
+            |
+            ---0xffffffff8f719b04
+               0xffffffff8f902758
+               0xffffffff8f1480de
+               0xffffffff90520b65
+               0xffffffff8ee0012b
+               __syscall_cancel_arch (inlined)
+               ___mq_timedreceive_time64 (inlined)
+
+     0.67%  sms_app_debug  [unknown]             [k] 0xffffffff90538af1
+            |
+            ---0xffffffff90538af1
+               0xffffffff8f3773eb
+               0xffffffff8f383524
+               0xffffffff8f385dee
+               0xffffffff8f148f75
+               0xffffffff90520b65
+               0xffffffff8ee0012b
+               __syscall_cancel_arch (inlined)
+               __clock_nanosleep (inlined)
+               __nanosleep
+
+     0.56%  sms_app_debug  [unknown]             [k] 0xffffffff8f147562
+            |
+            ---0xffffffff8f147562
+               0xffffffff90520b65
+               0xffffffff8ee0012b
+               __syscall_cancel_arch (inlined)
+               ___mq_timedreceive_time64 (inlined)
+
+     0.56%  sms_app_debug  [unknown]             [k] 0xffffffff8f147b52
+            |
+            ---0xffffffff8f147b52
+               0xffffffff90520b65
+               0xffffffff8ee0012b
+               __syscall_cancel_arch (inlined)
+               ___mq_timedreceive_time64 (inlined)
+
+     0.56%  sms_app_debug  [unknown]             [k] 0xffffffff8fae73b0
+            |
+            ---0xffffffff8fae73b0
+
+     0.56%  sms_app_debug  [unknown]             [k] 0xffffffff8fae73da
+            |
+            ---0xffffffff8fae73da
+               0xffffffff8f36ef4b
+
+     0.44%  sms_app_debug  [unknown]             [k] 0xffffffff8f147175
+     0.44%  sms_app_debug  [unknown]             [k] 0xffffffff8f148f75
+     0.44%  sms_app_debug  [unknown]             [k] 0xffffffff8f2b0758
+     0.44%  sms_app_debug  [unknown]             [k] 0xffffffff8f377360
+     0.44%  sms_app_debug  [unknown]             [k] 0xffffffff8f3834f0
+     0.44%  sms_app_debug  [unknown]             [k] 0xffffffff8f9021af
+     0.33%  sms_app_debug  [unknown]             [k] 0xffffffff8f24dd77
+     0.33%  sms_app_debug  [unknown]             [k] 0xffffffff8f36ef10
+     0.33%  sms_app_debug  [unknown]             [k] 0xffffffff8f383524
+     0.33%  sms_app_debug  [unknown]             [k] 0xffffffff8f385d00
+     0.33%  sms_app_debug  [unknown]             [k] 0xffffffff8f385d7e
+     0.33%  sms_app_debug  [unknown]             [k] 0xffffffff8f719b52
+     0.33%  sms_app_debug  [unknown]             [k] 0xffffffff8f719b8b
+     0.33%  sms_app_debug  [unknown]             [k] 0xffffffff8fae73b1
+     0.33%  sms_app_debug  [unknown]             [k] 0xffffffff9053078c
+     0.33%  sms_app_debug  [unknown]             [k] 0xffffffff9053baa7
+     0.22%  sms_app_debug  [vdso]                [.] 0x0000000000000a09
+     0.22%  sms_app_debug  libc.so.6             [.] __printf_buffer
+     0.22%  sms_app_debug  libc.so.6             [.] __printf_fp_buffer_1.isra.0
+     0.22%  sms_app_debug  mock_sensor.so        [.] read
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff8f146eff
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff8f14786d
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff8f1480d9
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff8f33ae2d
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff8f375335
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff8f375386
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff8f375755
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff8f375794
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff8f3773bc
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff8f3773f2
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff8f385d06
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff8f385dfd
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff8f719b51
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff90538bd3
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff90538bd5
+     0.22%  sms_app_debug  [unknown]             [k] 0xffffffff9053bca5
+     0.11%  sms_app_debug  [vdso]                [.] 0x0000000000000a37
+     0.11%  sms_app_debug  [vdso]                [.] 0x0000000000000a42
+     0.11%  sms_app_debug  [vdso]                [.] 0x0000000000000a71
+     0.11%  sms_app_debug  ld-linux-x86-64.so.2  [.] __GI___tunables_init
+     0.11%  sms_app_debug  libc.so.6             [.] _IO_file_write@@GLIBC_2.2.5
+     0.11%  sms_app_debug  libc.so.6             [.] _IO_file_xsputn@@GLIBC_2.2.5
+     0.11%  sms_app_debug  libc.so.6             [.] __GI_____strtod_l_internal
+     0.11%  sms_app_debug  libc.so.6             [.] __GI_____strtoull_l_internal
+     0.11%  sms_app_debug  libc.so.6             [.] __GI___libc_open
+     0.11%  sms_app_debug  libc.so.6             [.] __mempcpy_chk
+     0.11%  sms_app_debug  libc.so.6             [.] __mpn_rshift
+     0.11%  sms_app_debug  libc.so.6             [.] __snprintf_chk
+     0.11%  sms_app_debug  libc.so.6             [.] __syscall_cancel_arch_start
+     0.11%  sms_app_debug  libc.so.6             [.] _itoa_word
+     0.11%  sms_app_debug  libc.so.6             [.] pthread_create@GLIBC_2.2.5
+     0.11%  sms_app_debug  mock_sensor.so        [.] open
+     0.11%  sms_app_debug  sms_app_debug         [.] parse_sensor_csv
+     0.11%  sms_app_debug  sms_app_debug         [.] processor_thread
+     0.11%  sms_app_debug  sms_app_debug         [.] sensor_thread
+     0.11%  sms_app_debug  sms_app_debug         [.] time@plt
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f146c00
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f146c01
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f146f0b
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f147181
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f148f70
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f21b327
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f24dddc
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f25b3d0
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f2c28af
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f33ae20
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f33ae25
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f36ef15
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f36ef16
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f36ef6e
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f36ef84
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f375330
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f375357
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f37535e
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f375797
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f3757a5
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f3758e0
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f376545
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f377381
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f3773eb
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f377402
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f377d56
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f385d05
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f385d2c
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f385d3b
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f385d44
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f3bdf20
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f5cbb25
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f64cda2
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f655936
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f656a06
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f6bb22e
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f6bb27a
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f6bb2e5
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f6be27d
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f6be2cb
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f6dfb3d
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f6e7338
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f6e8c27
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f6fa636
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f700770
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f713de5
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f714010
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f719afd
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f719bb0
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f7238cc
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f9020a0
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f9020a5
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f9020c0
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f9020c4
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f90213f
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f90214e
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f9021a9
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f9021b4
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f9021bd
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f9023a1
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f9026d5
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f9026fc
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f90272a
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f902e3a
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f902e5a
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8f9223fd
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8fae73be
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8fae73c1
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8fae73e7
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8fae7592
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8fdb85e6
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff8fdbb415
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff90520b42
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff90520b45
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff90520b65
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff90520b69
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff9052b108
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff90530d76
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff90530d90
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff90530d97
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff90530d9e
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff90530df5
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff9053109e
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff90538aba
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff90538aee
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff90538b1a
+     0.11%  sms_app_debug  [unknown]             [k] 0xffffffff9053ba90
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

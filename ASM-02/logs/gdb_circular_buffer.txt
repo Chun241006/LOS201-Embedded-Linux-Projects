@@ -1,0 +1,47 @@
+Breakpoint 1 at 0x4c6f: file src/processor_thread.c, line 120.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff7bff6c0 (LWP 8449)]
+[New Thread 0x7fffef1ff6c0 (LWP 8450)]
+[New Thread 0x7ffff73fe6c0 (LWP 8451)]
+[Switching to Thread 0x7ffff73fe6c0 (LWP 8451)]
+
+Thread 4 "sms_app_debug" hit Breakpoint 1, processor_thread (arg=0x7fffffffd450) at src/processor_thread.c:120
+120	        ret = circular_buffer_pop(&ctx->buffer,
+$1 = {samples = {{timestamp_ms = 0, temperature = 0, humidity = 0} <repeats 64 times>}, head = 0, tail = 0, count = 0, mutex = {__data = {__lock = 0, __count = 0, __owner = 0, __nusers = 0, __kind = 0, __spins = 0, __unused = 0, __list = {__prev = 0x0, __next = 0x0}}, __size = '\000' <repeats 39 times>, __align = 0}, not_empty = {__data = {__wseq = {__value64 = 0, __value32 = {__low = 0, __high = 0}}, __g1_start = {__value64 = 0, __value32 = {__low = 0, __high = 0}}, __g_size = {0, 0}, __g1_orig_size = 0, __wrefs = 0, __g_signals = {0, 0}, __unused_initialized_1 = 0, __unused_initialized_2 = 0}, __size = '\000' <repeats 47 times>, __align = 0}}
+  Id   Target Id                                        Frame 
+  1    Thread 0x7ffff7f9a740 (LWP 8446) "sms_app_debug" __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:62
+  2    Thread 0x7ffff7bff6c0 (LWP 8449) "sms_app_debug" __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+  3    Thread 0x7fffef1ff6c0 (LWP 8450) "sms_app_debug" __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+* 4    Thread 0x7ffff73fe6c0 (LWP 8451) "sms_app_debug" processor_thread (arg=0x7fffffffd450) at src/processor_thread.c:120
+
+Thread 4 (Thread 0x7ffff73fe6c0 (LWP 8451) "sms_app_debug"):
+#0  processor_thread (arg=0x7fffffffd450) at src/processor_thread.c:120
+#1  0x00007ffff7ca3dfa in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:454
+#2  0x00007ffff7d375cc in __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 3 (Thread 0x7fffef1ff6c0 (LWP 8450) "sms_app_debug"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca030c in __internal_syscall_cancel (a1=a1@entry=0, a2=a2@entry=0, a3=<optimized out>, a4=<optimized out>, a5=a5@entry=0, a6=a6@entry=0, nr=230) at ./nptl/cancellation.c:49
+#2  0x00007ffff7cf5af2 in __GI___clock_nanosleep (clock_id=<optimized out>, clock_id@entry=0, flags=flags@entry=0, req=<optimized out>, rem=<optimized out>) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:48
+#3  0x00007ffff7d03707 in __GI___nanosleep (req=<optimized out>, rem=<optimized out>) at ../sysdeps/unix/sysv/linux/nanosleep.c:25
+#4  0x00005555555590bf in alert_thread (arg=0x7fffffffd450) at src/alert_thread.c:75
+#5  0x00007ffff7ca3dfa in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:454
+#6  0x00007ffff7d375cc in __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 2 (Thread 0x7ffff7bff6c0 (LWP 8449) "sms_app_debug"):
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+#1  0x00007ffff7ca030c in __internal_syscall_cancel (a1=a1@entry=0, a2=a2@entry=0, a3=<optimized out>, a4=<optimized out>, a5=a5@entry=0, a6=a6@entry=0, nr=230) at ./nptl/cancellation.c:49
+#2  0x00007ffff7cf5af2 in __GI___clock_nanosleep (clock_id=<optimized out>, clock_id@entry=0, flags=flags@entry=0, req=<optimized out>, rem=<optimized out>) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:48
+#3  0x00007ffff7d03707 in __GI___nanosleep (req=<optimized out>, rem=<optimized out>) at ../sysdeps/unix/sysv/linux/nanosleep.c:25
+#4  0x000055555555951c in logger_thread (arg=0x7fffffffd450) at src/logger_thread.c:151
+#5  0x00007ffff7ca3dfa in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:454
+#6  0x00007ffff7d375cc in __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:78
+
+Thread 1 (Thread 0x7ffff7f9a740 (LWP 8446) "sms_app_debug"):
+#0  __GI___clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:62
+#1  0x00007ffff7d374de in __clone3_internal (cl_args=0x7fffffffd1a0, func=0x7ffff7ca3b00 <start_thread>, arg=0x7ffff6bfd6c0) at ../sysdeps/unix/sysv/linux/clone-internal.c:82
+#2  __GI___clone_internal (cl_args=cl_args@entry=0x7fffffffd1a0, func=func@entry=0x7ffff7ca3b00 <start_thread>, arg=arg@entry=0x7ffff6bfd6c0) at ../sysdeps/unix/sysv/linux/clone-internal.c:100
+#3  0x00007ffff7ca3905 in create_thread (pd=pd@entry=0x7ffff6bfd6c0, attr=attr@entry=0x7fffffffd2b0, stopped_start=stopped_start@entry=0x7fffffffd2a6, stackaddr=stackaddr@entry=0x7ffff63fd000, stacksize=<optimized out>, thread_ran=thread_ran@entry=0x7fffffffd2a7) at ./nptl/pthread_create.c:298
+#4  0x00007ffff7ca462e in __pthread_create_2_1 (newthread=<optimized out>, attr=<optimized out>, start_routine=<optimized out>, arg=<optimized out>) at ./nptl/pthread_create.c:863
+#5  0x0000555555557508 in main (argc=5, argv=0x7fffffffdc78) at src/main.c:465
