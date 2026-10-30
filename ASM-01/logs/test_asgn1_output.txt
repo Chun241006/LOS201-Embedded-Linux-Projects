@@ -1,0 +1,65 @@
+======================================
+ ASM1 CHARACTER DRIVER TEST
+======================================
+[1] Checking kernel module...
+PASS: Kernel module loaded
+[2] Checking device node...
+PASS: Device node exists
+[3] Running IOCTL tests...
+SET_MODE 2 (expected error): Invalid argument
+=== ASM1 IOCTL TEST ===
+Driver version: asgn1_driver v1.0 - SE205235
+Open count     : 1
+Write count    : 0
+Read count     : 0
+Buffer length  : 0
+Last write size: 0
+
+=== TEST RESET_BUFFER ===
+RESET_BUFFER: SUCCESS
+Statistics after RESET_BUFFER:
+Open count     : 1
+Write count    : 0
+Read count     : 0
+Buffer length  : 0
+Last write size: 0
+
+=== TEST SET_MODE 0 ===
+SET_MODE 0: SUCCESS
+Mode 0 output: [KERNEL]Hello
+
+=== TEST SET_MODE 1 ===
+SET_MODE 1: SUCCESS
+Mode 1 output: Hello
+
+=== TEST INVALID MODE ===
+
+=== TEST INVALID IOCTL (ENOTTY) ===
+Invalid IOCTL: PASS (ENOTTY)
+[4] Checking Procfs...
+ASM1 Driver Statistics
+======================
+Driver name   : asgn1
+Major number  : 241
+Buffer size   : 1024 bytes
+Data length   : 5 bytes
+Open count    : 2
+Write count   : 2
+Read count    : 2
+Last write    : 5 bytes
+Current mode  : 1
+Last data     : [Hello]
+PASS: Procfs available
+[5] Checking Sysfs...
+buffer_len:
+5
+open_count:
+2
+last_data:
+Hello
+PASS: Sysfs attributes available
+[6] Unloading module...
+PASS: Module unloaded
+======================================
+ ASM1 TEST SCRIPT FINISHED
+======================================

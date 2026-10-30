@@ -1,0 +1,35 @@
+======================================
+ ASM1 MISC COUNTER DRIVER TEST
+======================================
+[1] Checking kernel module...
+PASS: Kernel module loaded
+[2] Checking device node...
+PASS: Device node exists
+[3] Checking Procfs...
+Counter Driver Information
+==========================
+Current counter : 0
+Total reads     : 0
+Total writes    : 0
+PASS: Procfs available
+[4] Testing write...
+PASS: Write 100
+[5] Testing read and increment...
+First read : 100
+Second read: 101
+PASS: Counter increments correctly
+[6] Testing invalid input...
+PASS: Negative value rejected
+PASS: Non-numeric value rejected
+PASS: Out-of-range value rejected
+[7] Checking final statistics...
+Counter Driver Information
+==========================
+Current counter : 102
+Total reads     : 2
+Total writes    : 1
+[8] Unloading module...
+PASS: Module unloaded
+======================================
+ ASM1 COUNTER TEST FINISHED
+======================================
