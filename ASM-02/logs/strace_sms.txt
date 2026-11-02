@@ -1,0 +1,2390 @@
+23237 execve("./sms_app_debug", ["./sms_app_debug", "-i", "500", "-d", "3"], 0x7ffcc59749a8 /* 64 vars */) = 0
+23237 brk(NULL)                         = 0x55653208c000
+23237 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x717c2c534000
+23237 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+23237 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+23237 fstat(3, {st_mode=S_IFREG|0644, st_size=81891, ...}) = 0
+23237 mmap(NULL, 81891, PROT_READ, MAP_PRIVATE, 3, 0) = 0x717c2c520000
+23237 close(3)                          = 0
+23237 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+23237 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \250\2\0\0\0\0\0"..., 832) = 832
+23237 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 840, 64) = 840
+23237 fstat(3, {st_mode=S_IFREG|0755, st_size=2190608, ...}) = 0
+23237 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 840, 64) = 840
+23237 mmap(NULL, 2231696, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x717c2c200000
+23237 mmap(0x717c2c228000, 1671168, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x717c2c228000
+23237 mmap(0x717c2c3c0000, 319488, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c0000) = 0x717c2c3c0000
+23237 mmap(0x717c2c40e000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x20e000) = 0x717c2c40e000
+23237 mmap(0x717c2c414000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x717c2c414000
+23237 close(3)                          = 0
+23237 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x717c2c51d000
+23237 arch_prctl(ARCH_SET_FS, 0x717c2c51d740) = 0
+23237 set_tid_address(0x717c2c51dd68)   = 23237
+23237 set_robust_list(0x717c2c51da20, 24) = 0
+23237 rseq(0x717c2c51d680, 0x21, 0, 0x53053053) = 0
+23237 mprotect(0x717c2c40e000, 16384, PROT_READ) = 0
+23237 mprotect(0x556526f27000, 4096, PROT_READ) = 0
+23237 mprotect(0x717c2c579000, 8192, PROT_READ) = 0
+23237 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+23237 getrandom("\x90\x0c\x43\xad\x4d\xae\x52\x34", 8, GRND_NONBLOCK) = 8
+23237 munmap(0x717c2c520000, 81891)     = 0
+23237 fstat(1, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0), ...}) = 0
+23237 brk(NULL)                         = 0x55653208c000
+23237 brk(0x5565320ad000)               = 0x5565320ad000
+23237 write(1, "================================"..., 37) = 37
+23237 write(1, " Sensor Monitoring System - ASM2"..., 33) = 33
+23237 write(1, "================================"..., 37) = 37
+23237 write(1, "Sample interval : 500 ms\n", 25) = 25
+23237 write(1, "Temperature limit: 40.0 C\n", 26) = 26
+23237 write(1, "Humidity limit   : 80.0 %\n", 26) = 26
+23237 write(1, "Duration         : 3 seconds\n", 29) = 29
+23237 write(1, "Verbose          : OFF\n", 23) = 23
+23237 rt_sigaction(SIGINT, {sa_handler=0x556526f23689, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x717c2c245cb0}, NULL, 8) = 0
+23237 mq_unlink("sms_alert_queue")      = -1 ENOENT (No such file or directory)
+23237 mq_unlink("sms_log_queue")        = -1 ENOENT (No such file or directory)
+23237 mq_open("sms_alert_queue", O_RDWR|O_CREAT|O_NONBLOCK, 0600, {mq_flags=0, mq_maxmsg=10, mq_msgsize=32, mq_curmsgs=0}) = 3
+23237 mq_open("sms_log_queue", O_RDWR|O_CREAT|O_NONBLOCK, 0600, {mq_flags=0, mq_maxmsg=10, mq_msgsize=40, mq_curmsgs=0}) = 4
+23237 write(1, "[MAIN] POSIX Message Queues init"..., 40) = 40
+23237 write(1, "[MAIN] System initialization com"..., 39) = 39
+23237 rt_sigaction(SIGRT_1, {sa_handler=0x717c2c2a0fe0, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x717c2c245cb0}, NULL, 8) = 0
+23237 rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+23237 mmap(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x717c2b9ff000
+23237 madvise(0x717c2b9ff000, 4096, MADV_GUARD_INSTALL) = 0
+23237 rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+23237 clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x717c2c1ffce8, parent_tid=0x717c2c1ff990, exit_signal=0, stack=0x717c2b9ff000, stack_size=0x7fff80, tls=0x717c2c1ff6c0} => {parent_tid=[23239]}, 88) = 23239
+23239 rseq(0x717c2c1ff600, 0x21, 0, 0x53053053 <unfinished ...>
+23237 rt_sigprocmask(SIG_SETMASK, [] <unfinished ...>
+23239 <... rseq resumed>)               = 0
+23237 <... rt_sigprocmask resumed>, NULL, 8) = 0
+23239 set_robust_list(0x717c2c1ff9a0, 24 <unfinished ...>
+23237 mmap(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0 <unfinished ...>
+23239 <... set_robust_list resumed>)    = 0
+23237 <... mmap resumed>)               = 0x717c2b1fe000
+23239 rt_sigprocmask(SIG_SETMASK, [] <unfinished ...>
+23237 madvise(0x717c2b1fe000, 4096, MADV_GUARD_INSTALL <unfinished ...>
+23239 <... rt_sigprocmask resumed>, NULL, 8) = 0
+23237 <... madvise resumed>)            = 0
+23239 mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+23237 rt_sigprocmask(SIG_BLOCK, ~[] <unfinished ...>
+23239 <... mmap resumed>)               = 0x717c23000000
+23237 <... rt_sigprocmask resumed>, [], 8) = 0
+23239 munmap(0x717c23000000, 16777216 <unfinished ...>
+23237 clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x717c2b9fece8, parent_tid=0x717c2b9fe990, exit_signal=0, stack=0x717c2b1fe000, stack_size=0x7fff80, tls=0x717c2b9fe6c0} <unfinished ...>
+23239 <... munmap resumed>)             = 0
+23239 munmap(0x717c28000000, 50331648)  = 0
+23239 mprotect(0x717c24000000, 135168, PROT_READ|PROT_WRITE <unfinished ...>
+23237 <... clone3 resumed> => {parent_tid=[23240]}, 88) = 23240
+23239 <... mprotect resumed>)           = 0
+23237 rt_sigprocmask(SIG_SETMASK, [] <unfinished ...>
+23240 rseq(0x717c2b9fe600, 0x21, 0, 0x53053053 <unfinished ...>
+23239 openat(AT_FDCWD, "/tmp/sms.log", O_WRONLY|O_CREAT|O_APPEND, 0666 <unfinished ...>
+23237 <... rt_sigprocmask resumed>, NULL, 8) = 0
+23237 mmap(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0 <unfinished ...>
+23239 <... openat resumed>)             = 5
+23240 <... rseq resumed>)               = 0
+23237 <... mmap resumed>)               = 0x717c2a9fd000
+23239 lseek(5, 0, SEEK_END <unfinished ...>
+23237 madvise(0x717c2a9fd000, 4096, MADV_GUARD_INSTALL <unfinished ...>
+23240 set_robust_list(0x717c2b9fe9a0, 24 <unfinished ...>
+23239 <... lseek resumed>)              = 0
+23237 <... madvise resumed>)            = 0
+23240 <... set_robust_list resumed>)    = 0
+23237 rt_sigprocmask(SIG_BLOCK, ~[] <unfinished ...>
+23240 rt_sigprocmask(SIG_SETMASK, [] <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23237 <... rt_sigprocmask resumed>, [], 8) = 0
+23240 <... rt_sigprocmask resumed>, NULL, 8) = 0
+23237 clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x717c2b1fdce8, parent_tid=0x717c2b1fd990, exit_signal=0, stack=0x717c2a9fd000, stack_size=0x7fff80, tls=0x717c2b1fd6c0} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=2263840}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3 <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=2364797}) = -1 EAGAIN (Resource temporarily unavailable)
+23237 <... clone3 resumed> => {parent_tid=[23241]}, 88) = 23241
+23241 rseq(0x717c2b1fd600, 0x21, 0, 0x53053053 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 rt_sigprocmask(SIG_SETMASK, [] <unfinished ...>
+23241 <... rseq resumed>)               = 0
+23237 <... rt_sigprocmask resumed>, NULL, 8) = 0
+23241 set_robust_list(0x717c2b1fd9a0, 24 <unfinished ...>
+23237 mmap(NULL, 8392704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0 <unfinished ...>
+23241 <... set_robust_list resumed>)    = 0
+23237 <... mmap resumed>)               = 0x717c2a1fc000
+23241 rt_sigprocmask(SIG_SETMASK, [] <unfinished ...>
+23237 madvise(0x717c2a1fc000, 4096, MADV_GUARD_INSTALL <unfinished ...>
+23241 <... rt_sigprocmask resumed>, NULL, 8) = 0
+23237 <... madvise resumed>)            = 0
+23241 futex(0x7fffad272ec0, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+23237 rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+23237 clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x717c2a9fcce8, parent_tid=0x717c2a9fc990, exit_signal=0, stack=0x717c2a1fc000, stack_size=0x7fff80, tls=0x717c2a9fc6c0} => {parent_tid=[23242]}, 88) = 23242
+23242 rseq(0x717c2a9fc600, 0x21, 0, 0x53053053 <unfinished ...>
+23237 rt_sigprocmask(SIG_SETMASK, [] <unfinished ...>
+23242 <... rseq resumed>)               = 0
+23237 <... rt_sigprocmask resumed>, NULL, 8) = 0
+23242 set_robust_list(0x717c2a9fc9a0, 24 <unfinished ...>
+23237 write(1, "[MAIN] All four threads started\n", 32 <unfinished ...>
+23242 <... set_robust_list resumed>)    = 0
+23237 <... write resumed>)              = 32
+23242 rt_sigprocmask(SIG_SETMASK, [] <unfinished ...>
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23242 <... rt_sigprocmask resumed>, NULL, 8) = 0
+23242 openat(AT_FDCWD, "/dev/sms_sensor", O_RDONLY) = -1 ENOENT (No such file or directory)
+23242 dup(2)                            = 6
+23242 fcntl(6, F_GETFL)                 = 0x80002 (flags O_RDWR|O_CLOEXEC)
+23242 mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x717c1c000000
+23242 munmap(0x717c20000000, 67108864)  = 0
+23242 mprotect(0x717c1c000000, 135168, PROT_READ|PROT_WRITE) = 0
+23242 fstat(6, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0), ...}) = 0
+23242 write(6, "sensor open: No such file or dir"..., 39) = 39
+23242 close(6)                          = 0
+23242 clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, {tv_sec=19243, tv_nsec=977766276} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=12684308}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=12720582}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=23084714}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=23105264}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=33602282}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=33608012}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=44525549}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=44486011}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=55443569}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=55460968}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=66247018}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=66313993}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=76743774}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=76749004}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=87755204}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=87812142}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=98780661}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=98802313}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=109427600}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=109402409}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=120100274}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=120131518}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=130596298}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=130590543}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=141357060}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=141428388}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=152001163}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=151991859}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=162723863}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=162751712}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=173555078}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=173596375}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=184463709}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=184468276}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=195161788}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3 <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=195224019}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=205568988}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=205525195}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=216425852}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=216428553}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=227264244}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=227253988}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=237962653}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=237995418}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=249359846}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=249368566}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=260573995}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=260548250}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=271539879}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=271536355}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=282442378}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=282407340}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=293222656}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=293220670}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=303827058}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=303843149}) = -1 EAGAIN (Resource temporarily unavailable)
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=314782452}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=314781228}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=325818092}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=325815618}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=336890443}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=336890379}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=348019922}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=348019969}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=358608972}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=358785315}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=369439544}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=369424262}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=380215628}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=380259613}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=390737565}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=390742031}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=401518975}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=401534476}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=412251659}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=412305542}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=423115125}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=423115052}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=433679566}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=433679523}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=444283058}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=444283044}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=454721961}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=454699893}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=465178852}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=465218279}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=475604841}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=475776202}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=486319534}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=486379448}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=496803156}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=497102861}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23242 <... clock_nanosleep resumed>, NULL) = 0
+23242 openat(AT_FDCWD, "/dev/sms_sensor", O_RDONLY) = -1 ENOENT (No such file or directory)
+23242 dup(2)                            = 6
+23242 fcntl(6, F_GETFL)                 = 0x80002 (flags O_RDWR|O_CLOEXEC)
+23242 fstat(6, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0), ...}) = 0
+23242 write(6, "sensor open: No such file or dir"..., 39) = 39
+23242 close(6)                          = 0
+23242 clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, {tv_sec=19244, tv_nsec=477766276} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=507530082}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=507666179}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=518372403}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=518378863}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=529045907}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=529081009}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=539491466}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=539575816}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=550112300}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=550130066}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=560746353}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=560745977}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=571529567}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=571545920}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=582285055}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=582325026}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=592917246}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=592925520}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=603853349}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=603859630}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=614650365}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=614654233}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=625448725}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=625448447}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=636006306}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=636183645}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=646647191}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=646899357}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=657268928}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=657307067}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=667723305}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=667892351}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=678449733}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=678460820}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=689117023}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=689155864}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=699899705}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=699902867}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=710566422}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=710588015}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=721226620}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=721225188}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=731986918}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=731987290}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=742601090}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=742601831}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=753345851}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=753394406}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=764046408}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=764084348}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=774687029}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=774643430}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=785317972}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=785520674}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=796040295}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=796216391}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=806785461}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=806967667}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=817411630}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=817503102}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=828179892}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=828217652}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=838814088}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=838813984}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=849435216}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=849406820}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=860151775}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3 <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=860194703}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=870694824}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=870823288}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=881351270}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=881390743}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=892068868}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=892176963}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=903023842}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=903023892}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=913536320}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=913551116}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=924273977}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=924328602}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=934668239}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=935006400}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=945689647}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=945718860}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=956448736}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=956440955}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=967232486}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3 <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=967286819}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=977666585}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=977931733}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=988377208}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=988428225}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696717, tv_nsec=999045367}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696717, tv_nsec=999048309}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23242 <... clock_nanosleep resumed>, NULL) = 0
+23242 openat(AT_FDCWD, "/dev/sms_sensor", O_RDONLY) = -1 ENOENT (No such file or directory)
+23242 dup(2)                            = 6
+23242 fcntl(6, F_GETFL)                 = 0x80002 (flags O_RDWR|O_CLOEXEC)
+23242 fstat(6, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0), ...}) = 0
+23242 write(6, "sensor open: No such file or dir"..., 39) = 39
+23242 close(6)                          = 0
+23242 clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, {tv_sec=19244, tv_nsec=977766276} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=9465545}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=9583569}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=20141972}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=20139957}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=30700504}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=30710922}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=41405024}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=41396037}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=52349000}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=52376947}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=62943881}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=63054957}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=73749200}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=73738903}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=84609611}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=84644151}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=95557592}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=95531429}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=106317033}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=106184720}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=116651747}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3 <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=116736063}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=126960443}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=127137312}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=137289395}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=137462369}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=147756514}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=148441326}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=158665672}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=159060654}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=169672939}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=169673131}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=180505810}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=180537839}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=191187051}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=191186912}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=201835333}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=201835432}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=212443605}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=212432315}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=223386620}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=223403760}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=234205930}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=234222951}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=245221473}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=245203416}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=255898564}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=256132803}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=266789744}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=266811350}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=277765705}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=277760842}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=288676099}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=288677277}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=299464201}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=299443023}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=310228471}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=310283689}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=320769672}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=321002026}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=331545723}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=331557351}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=342401489}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=342438766}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=353261517}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=353249675}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=364069528}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=364018378}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=374596228}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=374592080}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=385391980}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=385409680}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=395996252}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=396057791}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=406588103}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=406633466}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=416987253}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=417038445}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=427544181}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=427865775}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=438369046}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=438507359}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=449158162}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=449194889}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=459749035}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=459748930}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=470363343}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=470403859}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=481036126}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3 <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=481151143}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=491607332}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=491607282}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=502584745}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=502584691}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23242 <... clock_nanosleep resumed>, NULL) = 0
+23242 openat(AT_FDCWD, "/dev/sms_sensor", O_RDONLY) = -1 ENOENT (No such file or directory)
+23242 dup(2)                            = 6
+23242 fcntl(6, F_GETFL)                 = 0x80002 (flags O_RDWR|O_CLOEXEC)
+23242 fstat(6, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0), ...}) = 0
+23242 write(6, "sensor open: No such file or dir"..., 39) = 39
+23242 close(6)                          = 0
+23242 clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, {tv_sec=19245, tv_nsec=477766276} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=513274577}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3 <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=513334486}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=523722779}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3 <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=524023854}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=534411234}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=534568376}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=545072180}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=545116909}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=556040368}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=556040292}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=566752073}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=566751864}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=577569924}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=577589655}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=588342121}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=588342025}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=599200706}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=599200619}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=609607572}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=609643928}) = -1 EAGAIN (Resource temporarily unavailable)
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=620260005}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=620372978}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=631317776}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=631317657}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=642317233}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=642322896}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=653236533}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=653234495}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=664120204}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3 <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=664179537}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=674557448}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3 <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=674847944}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=685392016}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=685565186}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=696222187}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=696253068}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=706719585}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3 <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=707065735}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=717497677}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=717519404}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=728251046}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=728305123}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=738767270}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=738936240}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=749438740}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=749546475}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=760375056}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=760572242}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=771254285}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=771255343}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=782051188}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=782028995}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=792677107}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=792733374}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=803431991}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=803640572}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=814656482}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=814653679}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=825528128}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=825537727}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=836404455}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=836404157}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=847138781}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=847166965}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=857602183}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=857810777}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=868471257}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=868481059}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=879318223}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=879301843}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=890098423}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=890113846}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=900681378}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=900692910}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=911312027}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=911540266}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=922253729}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=922274320}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=932977799}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=933033940}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=943843104}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=943865662}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=954504017}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=954666439}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=965286715}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=965591457}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=976116717}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=976345767}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=987079420}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=987250592}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696718, tv_nsec=997906269}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696718, tv_nsec=998042288}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23242 <... clock_nanosleep resumed>, NULL) = 0
+23242 openat(AT_FDCWD, "/dev/sms_sensor", O_RDONLY) = -1 ENOENT (No such file or directory)
+23242 dup(2)                            = 6
+23242 fcntl(6, F_GETFL)                 = 0x80002 (flags O_RDWR|O_CLOEXEC)
+23242 fstat(6, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0), ...}) = 0
+23242 write(6, "sensor open: No such file or dir"..., 39) = 39
+23242 close(6)                          = 0
+23242 clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, {tv_sec=19245, tv_nsec=977766276} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=8397172}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=8511799}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=19103541}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=19139674}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=29748607}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=29775450}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=40439990}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=40385057}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=51305445}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=51367618}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=61747154}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=61994949}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=72456161}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=72457697}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=83127413}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=83085079}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=93511814}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=93524698}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=104094115}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3 <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=104144519}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=114453060}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=114729754}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=125400674}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=125386625}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=136184385}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=136184452}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=146697099}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=146680955}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=157477893}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=157500921}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=168212556}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=168255426}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=179005837}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=179006068}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=189680612}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=189837925}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=200451921}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=200511107}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=211187092}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=211325067}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=221701493}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=222000268}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=232438307}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=232698738}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=243318517}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=243648469}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=253768156}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=254516732}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=264566534}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=265387471}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=275272052}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=276157323}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=286091150}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=286542074}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=296675424}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=297122953}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=307111252}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=307747161}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=317532767}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=318435093}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=328311618}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=329098057}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=339217720}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=339775503}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=350067231}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=350433340}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=360742011}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=361135881}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=371638628}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=372167285}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=382441858}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=382715518}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=393278199}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=393373318}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=403707346}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=403902982}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=414320326}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=414320507}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=425057921}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=425057840}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=435542693}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=435650323}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=446267186}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=446205727}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=456747594}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=456747552}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=467360296}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=467360256}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=478064921}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=478064850}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=488673782}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=488686081}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=499345416}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=499396770}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23242 <... clock_nanosleep resumed>, NULL) = 0
+23242 openat(AT_FDCWD, "/dev/sms_sensor", O_RDONLY) = -1 ENOENT (No such file or directory)
+23242 dup(2)                            = 6
+23242 fcntl(6, F_GETFL)                 = 0x80002 (flags O_RDWR|O_CLOEXEC)
+23242 fstat(6, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0), ...}) = 0
+23242 write(6, "sensor open: No such file or dir"..., 39) = 39
+23242 close(6)                          = 0
+23242 clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, {tv_sec=19246, tv_nsec=477766276} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=509888260}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=509920630}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=100000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=520360810}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=520410360}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=531005513}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=530988020}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=541716021}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=541732792}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=552750306}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=552801097}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=563551007}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=563575129}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=574142252}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=574163758}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=584633274}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=584738633}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=595219412}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=595409604}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=605753519}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=606004820}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23237 <... clock_nanosleep resumed>, NULL) = 0
+23237 futex(0x717c2a9fcce8, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 2, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=616440630}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=616411124}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=627202925}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=627202853}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=637701205}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=637716832}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=648392635}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=648398306}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=658963870}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=658936335}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=669766891}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=669771893}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=680516359}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=680516315}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=691189169}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=691189209}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000}, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=701670996}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=701672122}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=712340431}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=712340360}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=722983517}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=723102823}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=733960072}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=733959987}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=744555154}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=744555033}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=755299613}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=755307293}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=765749076}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=765729822}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=776350978}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=776360145}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=786890890}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=787176882}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=797698168}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=798229009}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=808395936}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=808693459}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=819123922}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=819535633}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=829604902}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=830359857}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=840321160}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=840936320}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=850978045}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=851681332}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=861926423}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=862225834}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=872424082}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=872733373}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=883192740}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=883348167}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=893697843}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=894020357}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=904363662}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=904781725}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=915023013}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=915396052}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=925857731}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=925925423}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=936583188}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 mq_timedreceive(4 <unfinished ...>
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=936786307}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=947624952}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=947626472}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=958233772}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=958671291}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=968741986}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=969321089}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=979404275}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=979755741}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696719, tv_nsec=990231962}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696719, tv_nsec=990642045}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696720, tv_nsec=833708}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23239 mq_timedreceive(4, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696720, tv_nsec=1074328}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=0, tv_nsec=10000000} <unfinished ...>
+23242 <... clock_nanosleep resumed>, NULL) = 0
+23242 write(1, "[SENSOR] Thread stopped\n", 24) = 24
+23242 rt_sigprocmask(SIG_BLOCK, ~[RT_1], NULL, 8) = 0
+23242 madvise(0x717c2a1fc000, 8368128, MADV_DONTNEED) = 0
+23242 exit(0)                           = ?
+23237 <... futex resumed>)              = 0
+23242 +++ exited with 0 +++
+23237 futex(0x7fffad272ec0, FUTEX_WAKE_PRIVATE, 2147483647) = 1
+23241 <... futex resumed>)              = 0
+23241 futex(0x7fffad272e78, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+23237 futex(0x7fffad272e78, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+23241 <... futex resumed>)              = -1 EAGAIN (Resource temporarily unavailable)
+23237 <... futex resumed>)              = 0
+23241 futex(0x7fffad272e78, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+23237 write(1, "[MAIN] Stop requested\n", 22 <unfinished ...>
+23241 <... futex resumed>)              = 0
+23237 <... write resumed>)              = 22
+23241 futex(0x717c2c414750, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+23237 futex(0x717c2c414750, FUTEX_WAKE_PRIVATE, 1) = 1
+23241 <... futex resumed>)              = 0
+23237 futex(0x717c2b1fdce8, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 2, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+23241 write(1, "[PROCESSOR] Thread stopped\n", 27) = 27
+23241 futex(0x717c2c414750, FUTEX_WAKE_PRIVATE, 1) = 0
+23241 rt_sigprocmask(SIG_BLOCK, ~[RT_1], NULL, 8) = 0
+23241 madvise(0x717c2a9fd000, 8368128, MADV_DONTNEED) = 0
+23241 exit(0)                           = ?
+23241 +++ exited with 0 +++
+23237 <... futex resumed>)              = 0
+23237 futex(0x717c2b9fece8, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 2, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+23240 <... clock_nanosleep resumed>, NULL) = 0
+23239 <... clock_nanosleep resumed>, NULL) = 0
+23240 mq_timedreceive(3 <unfinished ...>
+23239 mq_timedreceive(4 <unfinished ...>
+23240 <... mq_timedreceive resumed>, 0x717c2b9fde50, 32, NULL, {tv_sec=1792696720, tv_nsec=11533148}) = -1 EAGAIN (Resource temporarily unavailable)
+23239 <... mq_timedreceive resumed>, 0x717c2c1fee60, 40, NULL, {tv_sec=1792696720, tv_nsec=11596549}) = -1 EAGAIN (Resource temporarily unavailable)
+23240 write(1, "[ALERT] Thread stopped\n", 23 <unfinished ...>
+23239 close(5 <unfinished ...>
+23240 <... write resumed>)              = 23
+23240 rt_sigprocmask(SIG_BLOCK, ~[RT_1] <unfinished ...>
+23239 <... close resumed>)              = 0
+23240 <... rt_sigprocmask resumed>, NULL, 8) = 0
+23240 madvise(0x717c2b1fe000, 8368128, MADV_DONTNEED <unfinished ...>
+23239 write(1, "[LOGGER] Thread stopped\n", 24 <unfinished ...>
+23240 <... madvise resumed>)            = 0
+23239 <... write resumed>)              = 24
+23240 exit(0 <unfinished ...>
+23239 rt_sigprocmask(SIG_BLOCK, ~[RT_1], NULL, 8) = 0
+23240 <... exit resumed>)               = ?
+23239 madvise(0x717c2b9ff000, 8368128, MADV_DONTNEED <unfinished ...>
+23240 +++ exited with 0 +++
+23237 <... futex resumed>)              = 0
+23239 <... madvise resumed>)            = 0
+23237 futex(0x717c2c1ffce8, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 1, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+23239 exit(0)                           = ?
+23239 +++ exited with 0 +++
+23237 <... futex resumed>)              = 0
+23237 write(1, "\n", 1)                 = 1
+23237 write(1, "========== SMS STATISTICS ======"..., 37) = 37
+23237 write(1, "Samples received    : 0\n", 24) = 24
+23237 write(1, "Samples dropped     : 0\n", 24) = 24
+23237 write(1, "Read errors         : 6\n", 24) = 24
+23237 write(1, "Temperature alerts  : 0\n", 24) = 24
+23237 write(1, "Humidity alerts     : 0\n", 24) = 24
+23237 write(1, "Temperature spikes  : 0\n", 24) = 24
+23237 write(1, "Alert queue errors  : 0\n", 24) = 24
+23237 write(1, "Log queue errors    : 0\n", 24) = 24
+23237 write(1, "================================"..., 37) = 37
+23237 close(3)                          = 0
+23237 close(4)                          = 0
+23237 mq_unlink("sms_alert_queue")      = 0
+23237 mq_unlink("sms_log_queue")        = 0
+23237 write(1, "[MAIN] POSIX Message Queues clea"..., 39) = 39
+23237 write(1, "[MAIN] Application stopped\n", 27) = 27
+23237 exit_group(0)                     = ?
+23237 +++ exited with 0 +++
